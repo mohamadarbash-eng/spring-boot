@@ -15,7 +15,9 @@
 	</bean>
 
 	<bean id="circketCoach" class="com.springboot.mo.CricketCoach">
-	<property name="fortuneService" ref="myFortune" />
+		<property name="fortuneService" ref="myFortune" />
+		<property name="emailAddress" value="mo@mo.de" />
+		<property name="team" value="hus" />
 	</bean>
 
 	<bean id="baseballCoach" class="com.springboot.mo.BaseballCoach">
