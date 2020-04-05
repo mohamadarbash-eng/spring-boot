@@ -2,7 +2,7 @@ package com.anotation.mo;
 
 import org.springframework.stereotype.Component;
 
-@Component("yourMyCoach")
+@Component
 public class TennisCoach implements Coach {
 
 	@Override
