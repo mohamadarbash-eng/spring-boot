@@ -1,15 +1,18 @@
 package com.anotation.mo;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 	
+
 	private FortuneService fortuneService;
 	
     @Autowired
-	public TennisCoach(FortuneService theFortuneService) {
+	public TennisCoach(@Qualifier("sadFortuneService") FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
 	}
 
