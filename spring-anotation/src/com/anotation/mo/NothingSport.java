@@ -5,16 +5,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NothingSport implements Coach {
+	@Autowired
 	private FortuneService fortuneService;
 	
 	public NothingSport() {
 		
 	}
 	
+	/*
 	@Autowired
 	public void setForuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
+	*/
 	
 	@Override
 	public String getDailyWorkout() {
