@@ -1,13 +1,14 @@
 package com.anotation.mo;
 
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 	
 
@@ -18,6 +19,14 @@ public class TennisCoach implements Coach {
 		fortuneService = theFortuneService;
 	}
 
+	@PostConstruct()
+	public void onInit() {
+		System.out.println("I am Oninit");
+	}
+	@PreDestroy()
+	public void onDestroy() {
+		System.out.println("I am Destroy");
+	}
 
 	@Override
 	public String getDailyWorkout() {
