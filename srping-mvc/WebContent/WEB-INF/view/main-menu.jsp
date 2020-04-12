@@ -4,6 +4,7 @@
 <h2>
 HI I am Main Menu
 </h2>
-<a href="showForm">go to show Form</a>
+<a href="hello/showForm">go to show Form</a>
+<a href="bye/showForm"> bye world</a>
 </body>
 </html>
