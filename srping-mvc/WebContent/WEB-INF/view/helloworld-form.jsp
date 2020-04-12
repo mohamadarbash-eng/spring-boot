@@ -6,7 +6,7 @@
 <h2>
 HI I am Main Menu
 </h2>
-<form action="processFormFun" method="GET">
+<form action="processFormSad" method="GET">
 <input type="text" name=studentName  placeholder="what is your name"/>
 
 <input type="submit"/>
