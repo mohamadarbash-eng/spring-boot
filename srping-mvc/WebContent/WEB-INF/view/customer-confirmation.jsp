@@ -16,6 +16,8 @@ The customer is confirmed: ${customer.firstName} ${customer.lastName} ${customer
 
 Postal Code: ${customer.postalCode}
 
+Course Code: ${customer.courseCode}
+
 </body>
 
 </html>
