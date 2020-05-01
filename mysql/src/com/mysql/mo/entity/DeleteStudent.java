@@ -41,20 +41,7 @@ public class DeleteStudent {
 		}
 		finally {
 			factory.close();
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		}		
 	}
 
 }
