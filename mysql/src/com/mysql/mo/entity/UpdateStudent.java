@@ -1,16 +1,12 @@
 package com.mysql.mo.entity;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 
 
-
-
-public class QueryStudent {
+public class UpdateStudent {
 
 	public static void main(String[] args) {
 		
@@ -22,36 +18,46 @@ public class QueryStudent {
 		Session session = factory.getCurrentSession();
 				                     
 		try {
-			System.out.println("Query");
-			
-			session.beginTransaction();
-			
-			List<Student> theStudents = session.createQuery("from Student").getResultList();
+			System.out.println("Update");
+			int studentId = 1;
 			
 			
-			displayStudent(theStudents);
+			session.beginTransaction();	
 			
-			
-			theStudents = session.createQuery("from Student s where s.lastName='Me3'").getResultList();
-			displayStudent(theStudents);
-			
-			
+			Student tempStudent = session.get(Student.class, studentId);
 
+			tempStudent.setFirstName("scoopy");
+			
+			
 			session.getTransaction().commit();
+			System.out.println("update all");
+			session = factory.getCurrentSession();
+			session.beginTransaction();	
+			
+			session.createQuery("update Student set email='foo@gmail.com'")
+			.executeUpdate();
+			
+			
+			session.getTransaction().commit();
+			
 			
 		}
 		finally {
 			factory.close();
 		}
 		
-	
 		
-	}
-
-	private static void displayStudent(List<Student> theStudents) {
-		for (Student theTempStudent : theStudents) {
-			System.out.println(theTempStudent);
-		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
